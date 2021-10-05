@@ -1,0 +1,45 @@
+<?php
+	require_once ("../../config.php");
+	//echo $server_host;
+	$author_name = "Lisett-Marleen Tänav";
+	//kas klikiti submitt nuppu
+	if(isset($_POST["film_submit"])){
+		if(!empty($_POST["title_input"]) and !empty($_POST["genre_input"]) and !empty($_POST["studio_input"]) and !empty($_POST["director_input"])) {
+				$film_store_notice= store_film($_POST["title_input"],$_POST["year_input"],$_POST["duration_input"] $_POST["genre_input"],$_POST["studio_input"],$_POST["director_input"]  );
+		} else{
+			$film_store_notice= "Osa andmeid puudu";
+		}
+	}	
+	
+	
+?>
+<!DOCTYPE html>
+<html lang="et">
+<head>
+	<meta charset="utf-8">
+	<title><?php echo $author_name; ?>, veebiprogrammeerimine</title>
+</head>
+<body>
+	<h1><?php echo$author_name; ?>, veebiprogrammeerimine</h1>
+	<p>See leht on valminud õppetöö raames ja ei sisalda mingit tõsiseltvõetavat sisu!</p>
+	<p>Õppetöö toimub <a href="https://www.tlu.ee/dt">Tallinna Ülikooli Digitehnoloogiate instituudis</a>.</p>
+	<p>Õppetöö toimus 2021 sügisel. </p>
+	<hr>
+	<h2>Eesti filmid </h2>
+	<form method = "POST">
+		<lable for= "title_input">Filmi pealkir: </lable>
+		<input type= "text" name="title_input" id="title_input" placeholder="pealkiri">
+		<br>
+		<label for= "year_input">valmimisaasta: </label>
+		<input type="number" name= "year_input" id= "year_input" value= "<?php echo date ("."); ?>" min= "1912"> 
+		<br>
+		<label for= "duration_time">kestus minutites: </label>
+		<input type="number" name= "duration_input" id= "duration_input" value="60"  min="1"> 
+		<br>
+		<lable for= "genre_input">Filmi zanr: </lable>
+		<input type= "text" name="genre_input" id="genre_input" placeholder="zanr">
+		<br>
+	</form>
+	<p><?php echo 
+</body>
+</html>
