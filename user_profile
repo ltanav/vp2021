@@ -31,7 +31,7 @@
 		<input type= "text" name="title_input" id="title_input" placeholder="pealkiri">
 		<br>
 		<label for= "year_input">valmimisaasta: </label>
-		<input type="number" name= "year_input" id= "year_input" value= "<?php echo date ("."); ?>" min= "1912"> 
+		<input type="number" name= "year_input" id= "year_input" value= "<?php echo date ("."); ?> min= "1912"> 
 		<br>
 		<label for= "duration_time">kestus minutites: </label>
 		<input type="number" name= "duration_input" id= "duration_input" value="60"  min="1"> 

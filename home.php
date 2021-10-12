@@ -26,9 +26,25 @@
 	<hr>
     <ul>
         <li><a href="?logout=1">Logi välja</a></li>
+		<li><a href="home.php">avaleht</a></li>
+	</ul>
+	<hr>
+	<h2>Filmi info seostamine</h2>
+	<h3>Film, inimene ja tema roll</h3>
+		
+		<label from="person_select">Isik: </label>
+		<select name="person_select" id="person_select">
+			<option value="" selected disabled>Vali isik</option>
+			<?php echo read_all_person_for_option();
+		</select>
+		<input type="submit" name="profile_submit" value="salvesta">
+<?php
+	$satabase="if21_lisett_ta";
+	
 		<li><a href="list_films.php">Filmide nimekirja vaatamine</a> versioon 1</li>
 		<li><a href="add_films.php">Filmide lisamine andmebaasi</a> versioon 1</li>
 		<lin><a href= "user_profile.php">kasutajaprofiil</a></li>
+		
     </ul>
 </body>
 </html>
