@@ -17,7 +17,7 @@
 <html lang="et">
 <head>
 	<meta charset="utf-8">
-	<title><?php echo $author_name; ?>, veebiprogrammeerimine</title>
+	<title><?php echo $author_name; ?>Lisett-Marleen Tänav, veebiprogrammeerimine</title>
 </head>
 <body>
 	<h1><?php echo$author_name; ?>, veebiprogrammeerimine</h1>

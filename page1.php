@@ -11,7 +11,7 @@
 		//echo "klikiti nuppu";
 		if(!empty($_post["todays_adjective_input"])){
 			$today_html = "<p> Tänane päev on" .$_POST["todays_adjective_input"].
-			.</p>; 
+			</p>; 
 		}else (
 			$todays_adjective_error="Palun kirjutage tänase ilma kohta"
 		}		
